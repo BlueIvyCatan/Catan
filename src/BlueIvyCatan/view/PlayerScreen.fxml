@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="195.0" minHeight="10.0" prefHeight="128.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="272.0" minHeight="10.0" prefHeight="272.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label id="lblPlayer1Name" prefHeight="25.0" text="Player 1 Name" />
+                  <Label id="lblPlayer1Password" prefHeight="25.0" text="Player 1 Password" />
+                  <Label id="lblPlayer2Name" prefHeight="25.0" text="Player 2 Name" />
+                  <Label id="lblPlayer2Password" prefHeight="25.0" text="Player 2 Password" />
+                  <Label id="lblPlayer3Name" prefHeight="25.0" text="Player 3 Name" />
+                  <Label id="lblPlayer3Password" prefHeight="25.0" text="Player 3 Password" />
+                  <Label id="lblPlayer4Name" prefHeight="25.0" text="Player 4 Name" />
+                  <Label id="lblPlayer4Password" prefHeight="25.0" text="Player 4 Password" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <TextField id="txtPlayer1Name" promptText="Enter Name" />
+                  <TextField id="txtPlayer1Password" promptText="Enter Password " />
+                  <TextField id="txtPlayer2Name" promptText="Enter Name" />
+                  <TextField id="txtPlayer2Password" promptText="Enter Password" />
+                  <TextField id="txtPlayer3Name" promptText="Enter Name" />
+                  <TextField id="txtPlayer3Password" promptText="Enter Password" />
+                  <TextField id="txtPlayer4Name" promptText="Enter Name" />
+                  <TextField id="txtPlayer4Password" promptText="Enter Password" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Label text="Number of Players" />
+            <ComboBox prefWidth="150.0" />
+         </children>
+      </HBox>
+      <Button id="btnStartGame" alignment="CENTER" mnemonicParsing="false" text="Start Game" GridPane.columnIndex="1" />
+   </children>
+</GridPane>
