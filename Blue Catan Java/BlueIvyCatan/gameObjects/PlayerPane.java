@@ -1,4 +1,4 @@
-package BlueIvyCatan.gameObjects;
+package gameObjects;
 
 import javafx.geometry.HPos;
 import javafx.geometry.Insets;
@@ -23,6 +23,11 @@ public class PlayerPane extends GridPane {
     double rowHeight;
     double columnWidth;
     GridPane playerPane;
+    Text player1Name;
+    Text player2Name;
+    Text player3Name;
+    Text player4Name;
+    ArrayList<Text> names = new ArrayList<>();
 
 
     public PlayerPane(double height, double width){
@@ -65,7 +70,7 @@ public class PlayerPane extends GridPane {
         playerIconContainers.add(3,new StackPane());
 //        this.setGridLinesVisible(true);
 
-        Image image = new Image("BlueIvyCatan/images/pawn.png",columnWidth,rowHeight,false,false);
+        Image image = new Image("images/pawn.png",columnWidth,rowHeight,false,false);
 
 
         for(int i = 0; i < playerIconContainers.size();i++){
@@ -93,6 +98,7 @@ public class PlayerPane extends GridPane {
             t.setText("Player"+Integer.toString(i));
             t.setTextAlignment(TextAlignment.CENTER);
             t.setFill(Color.RED);
+            names.add(t);
 
             s.setBackground(b);
             s.setBorder(new Border(new BorderStroke(Color.BLACK, BorderStrokeStyle.SOLID, CornerRadii.EMPTY, BorderWidths.DEFAULT)));
@@ -102,6 +108,10 @@ public class PlayerPane extends GridPane {
             GridPane.setValignment(t, VPos.CENTER);
 
         }
+        player1Name = names.get(0);
+        player2Name = names.get(1);
+        player3Name = names.get(2);
+        player4Name = names.get(3);
 
     }
     public void update(){

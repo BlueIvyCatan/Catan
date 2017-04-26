@@ -1,4 +1,4 @@
-package BlueIvyCatan.gameObjects;
+package gameObjects;
 
 import javafx.geometry.Bounds;
 import javafx.scene.control.Tooltip;

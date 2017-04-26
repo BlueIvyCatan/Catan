@@ -1,4 +1,4 @@
-package BlueIvyCatan.gameObjects;
+package gameObjects;
 
 import java.util.Random;
 import javafx.scene.image.Image;
@@ -17,12 +17,13 @@ public class Dice {
     Pane die2Face;
     double dieHeight;
     double dieWidth;
-    final Image FACE1 = new Image("BlueIvyCatan/images/dice-six-faces-one.png");
-    final Image FACE2 = new Image("BlueIvyCatan/images/dice-six-faces-two.png");
-    final Image FACE3 = new Image("BlueIvyCatan/images/dice-six-faces-three.png");
-    final Image FACE4 = new Image("BlueIvyCatan/images/dice-six-faces-four.png");
-    final Image FACE5 = new Image("BlueIvyCatan/images/dice-six-faces-five.png");
-    final Image FACE6 = new Image("BlueIvyCatan/images/dice-six-faces-six.png");
+    
+    final Image FACE1 = new Image("images/dice-six-faces-one.png");
+    final Image FACE2 = new Image("images/dice-six-faces-two.png");
+    final Image FACE3 = new Image("images/dice-six-faces-three.png");
+    final Image FACE4 = new Image("images/dice-six-faces-four.png");
+    final Image FACE5 = new Image("images/dice-six-faces-five.png");
+    final Image FACE6 = new Image("images/dice-six-faces-six.png");
 
     public Dice(){
         initializeValues();

@@ -1,4 +1,4 @@
-package BlueIvyCatan.gameObjects;
+package gameObjects;
 
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -74,19 +74,19 @@ public class ResourceTradeDialog extends Dialog {
         resourcesToTrade.add("wood");
         switch(resourceToGain){
             case "wood":
-                resourcesToTrade.remove(0);
+                resourcesToTrade.remove(5);
                 break;
             case "brick":
-                resourcesToTrade.remove(1);
+                resourcesToTrade.remove(0);
                 break;
             case "ore":
-                resourcesToTrade.remove(2);
+                resourcesToTrade.remove(1);
                 break;
             case "sheep":
                 resourcesToTrade.remove(3);
                 break;
             case "wheat":
-                resourcesToTrade.remove(4);
+                resourcesToTrade.remove(2);
                 break;
         }
     }

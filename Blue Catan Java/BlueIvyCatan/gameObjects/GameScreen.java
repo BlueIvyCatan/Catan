@@ -1,4 +1,4 @@
-package BlueIvyCatan.gameObjects;
+package gameObjects;
 
 import javafx.scene.control.Button;
 import javafx.scene.layout.ColumnConstraints;

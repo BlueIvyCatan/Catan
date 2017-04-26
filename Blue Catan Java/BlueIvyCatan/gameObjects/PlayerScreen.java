@@ -1,4 +1,4 @@
-package BlueIvyCatan.gameObjects;
+package gameObjects;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
@@ -6,6 +6,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.TitledPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 
@@ -25,7 +26,7 @@ public class PlayerScreen extends Pane {
     TextField txtPlayer4Password;
     public PlayerScreen(double height, double width){
         try {
-            TitledPane gridPane = (TitledPane) FXMLLoader.load(PlayerScreen.class.getResource("/BlueIvyCatan/view/Catan Login.fxml"));
+            AnchorPane gridPane = (AnchorPane) FXMLLoader.load(PlayerScreen.class.getResource("/view/Catan Login.fxml"));
             gridPane.setPrefWidth(width);
             gridPane.setPrefHeight(height);
             btnStartGame = (Button) gridPane.lookup("#btnLogin");

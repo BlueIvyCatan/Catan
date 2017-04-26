@@ -1,4 +1,4 @@
-package BlueIvyCatan.gameObjects;
+package gameObjects;
 
 import javafx.scene.control.Tooltip;
 import javafx.scene.image.Image;
@@ -73,25 +73,25 @@ public class HexTile extends StackPane {
         Image tileBackground;
         switch(hexType) {
             case "forest":
-                tileBackground = new Image("BlueIvyCatan/images/Forest Tile.PNG", hexRadius, hexRadius, true, true);
+                tileBackground = new Image("images/Forest Tile.PNG", hexRadius, hexRadius, true, true);
                 break;
             case "field":
-                tileBackground = new Image("BlueIvyCatan/images/FieldsTile.PNG", hexRadius, hexRadius, true, true);
+                tileBackground = new Image("images/FieldsTile.PNG", hexRadius, hexRadius, true, true);
                 break;
             case "pasture":
-                tileBackground = new Image("BlueIvyCatan/images/Pasture Tile.PNG", hexRadius, hexRadius, true, true);
+                tileBackground = new Image("images/Pasture Tile.PNG", hexRadius, hexRadius, true, true);
                 break;
             case "mountain":
-                tileBackground = new Image("BlueIvyCatan/images/Mountains Tile.PNG", hexRadius, hexRadius, true, true);
+                tileBackground = new Image("images/Mountains Tile.PNG", hexRadius, hexRadius, true, true);
                 break;
             case "hill":
-                tileBackground = new Image("BlueIvyCatan/images/Hills Tile.PNG", hexRadius, hexRadius, true, true);
+                tileBackground = new Image("images/Hills Tile.PNG", hexRadius, hexRadius, true, true);
                 break;
             case "desert":
-                tileBackground = new Image("BlueIvyCatan/images/Desert Tile.PNG", hexRadius, hexRadius, true, true);
+                tileBackground = new Image("images/Desert Tile.PNG", hexRadius, hexRadius, true, true);
                 break;
             default:
-                tileBackground = new Image("BlueIvyCatan/images/deck.png", hexRadius, hexRadius,true,true);
+                tileBackground = new Image("images/deck.png", hexRadius, hexRadius,true,true);
 
         }
         ImagePattern background =new ImagePattern(tileBackground, 0 ,0,1,1,true);
@@ -126,7 +126,7 @@ public class HexTile extends StackPane {
             rollText.setBoundsType(TextBoundsType.VISUAL);
             rollPane.getChildren().add(rollText);
         } else {
-            ImagePattern robber = new ImagePattern(new Image("BlueIvyCatan/images/pawn.png"));
+            ImagePattern robber = new ImagePattern(new Image("images/pawn.png"));
             rollCircle.setFill(robber);
         }
         this.getChildren().add(rollPane);

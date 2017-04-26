@@ -1,4 +1,4 @@
-package BlueIvyCatan.gameObjects;
+package gameObjects;
 
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
@@ -12,7 +12,7 @@ public class TitleScreen extends Pane{
     Button btnNewGame;
     public TitleScreen(double height, double width) {
 //        this.setStyle("-fx-background-color: red");
-        this.setStyle("-fx-background-image: url('BlueIvyCatan/images/catan.jpg'); -fx-background-size: stretch");
+        this.setStyle("-fx-background-image: url('/images/catan.jpg'); -fx-background-size: stretch");
         btnNewGame = new Button("Start New Game");
         btnNewGame.setLayoutX(width/2);
         btnNewGame.setLayoutY(height/2);

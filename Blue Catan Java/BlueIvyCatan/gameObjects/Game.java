@@ -1,4 +1,4 @@
-package BlueIvyCatan.gameObjects;
+package gameObjects;
 
 import javafx.application.Platform;
 import javafx.event.EventHandler;
@@ -134,7 +134,7 @@ public class Game {
         Node loginButton = dialog.getDialogPane().lookupButton(loginButtonType);
         loginButton.setDisable(true);
 
-        username.textProperty().addListener((observable, oldValue, newValue) -> {
+        password.textProperty().addListener((observable, oldValue, newValue) -> {
             loginButton.setDisable(newValue.trim().isEmpty());
         });
 
@@ -164,7 +164,7 @@ public class Game {
 
                 Password.append(usernamePassword);
             });
-        } while (Password.toString()!=currentPlayer.getPlayerPassword());
+        } while (!Password.toString().equals(currentPlayer.getPlayerPassword()));
     }
 
     public void setMouseListeners(){
@@ -188,6 +188,10 @@ public class Game {
                 player2.setPlayerPassword(playerScreen.txtPlayer2Password.getText());
                 player3.setPlayerPassword(playerScreen.txtPlayer3Password.getText());
                 player4.setPlayerPassword(playerScreen.txtPlayer4Password.getText());
+                gameScreen.playerPane.player1Name.setText(player1.getPlayerName());
+                gameScreen.playerPane.player2Name.setText(player2.getPlayerName());
+                gameScreen.playerPane.player3Name.setText(player3.getPlayerName());
+                gameScreen.playerPane.player4Name.setText(player4.getPlayerName());
                 stage.getScene().setRoot(gameScreen);
             }
         });
@@ -581,9 +585,10 @@ public class Game {
                 gameScreen.board.hexTiles.get(i).rollPane.getChildren().add(gameScreen.board.hexTiles.get(i).rollText);
             }
         }
-        ImagePattern robber = new ImagePattern(new Image("BlueIvyCatan/images/pawn.png"));
+        ImagePattern robber = new ImagePattern(new Image("images/pawn.png"));
         hex.rollPane.getChildren().remove(hex.rollText);
         hex.rollCircle.setFill(robber);
+        gameStage = MAIN_GAME;
     }
 
     private void updatePlayer(){
@@ -591,15 +596,19 @@ public class Game {
             case 1:
                 numCurrentPlayer = 2;
                 currentPlayer = player2;
+                break;
             case 2:
                 numCurrentPlayer = 3;
                 currentPlayer = player3;
+                break;
             case 3:
                 numCurrentPlayer = 4;
                 currentPlayer = player4;
+                break;
             case 4:
                 numCurrentPlayer = 1;
                 currentPlayer = player1;
+                break;
             default:
                 break;
         }
@@ -628,7 +637,7 @@ public class Game {
 
     private void roadPurchase(Player player, Road road){
         if (!road.isOwned() && road.available) {
-            if (player.getPlayerBrick() >1 && player.getPlayerWood()>1){
+            if (player.getPlayerBrick() >=1 && player.getPlayerWood()>=1){
                 player.setPlayerBrick(player.getPlayerBrick() - 1);
                 player.setPlayerWood(player.getPlayerWood() - 1);
                 road.setOwner(player);

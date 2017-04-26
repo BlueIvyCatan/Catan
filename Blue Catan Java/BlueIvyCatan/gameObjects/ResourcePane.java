@@ -1,4 +1,4 @@
-package BlueIvyCatan.gameObjects;
+package gameObjects;
 
 import javafx.scene.image.*;
 import javafx.scene.image.Image;
@@ -76,7 +76,7 @@ public class ResourcePane extends GridPane {
         c3.setPercentWidth(100/ NUMCOLUMNS);
         c4.setPercentWidth(100/ NUMCOLUMNS);
         this.getColumnConstraints().addAll(c1,c2,c3,c4);
-        Image d = new Image("BlueIvyCatan/images/deck.png",columnWidth*2,diceRowHeight,false,true);
+        Image d = new Image("images/deck.png",columnWidth*2,diceRowHeight,false,true);
         deck = new ImageView(d);
 
         diceGrid = new GridPane();
@@ -91,7 +91,7 @@ public class ResourcePane extends GridPane {
         diceGrid.getRowConstraints().addAll(diceRow1, diceRow2);
         diceGrid.getColumnConstraints().addAll(diceColumn1, diceColumn2);
 
-        Image defaultDie = new Image("BlueIvyCatan/images/defaultdieface.png", columnWidth,diceRowHeight/2,false,false);
+        Image defaultDie = new Image("images/defaultdieface.png", columnWidth,diceRowHeight/2,false,false);
         ImageView defaultDieFace1 = new ImageView(defaultDie);
         ImageView defaultDieFace2 = new ImageView(defaultDie);
         diePane1 = new StackPane();
@@ -116,11 +116,11 @@ public class ResourcePane extends GridPane {
         this.add(deck,2,0,2,1);
 
 
-        Image b = new Image("BlueIvyCatan/images/brick.jpg", columnWidth, resourceRowHeight, false, false);
-        Image o = new Image("BlueIvyCatan/images/ore.jpg",columnWidth,resourceRowHeight,false, false);
-        Image wh = new Image("BlueIvyCatan/images/wheat.jpg", columnWidth,resourceRowHeight,false,false);
-        Image s = new Image("BlueIvyCatan/images/sheep.jpg", columnWidth,resourceRowHeight,false,false);
-        Image wo = new Image("BlueIvyCatan/images/wood.jpg", columnWidth, resourceRowHeight, false, false);
+        Image b = new Image("images/brick.jpg", columnWidth, resourceRowHeight, false, false);
+        Image o = new Image("images/ore.jpg",columnWidth,resourceRowHeight,false, false);
+        Image wh = new Image("images/wheat.jpg", columnWidth,resourceRowHeight,false,false);
+        Image s = new Image("images/sheep.jpg", columnWidth,resourceRowHeight,false,false);
+        Image wo = new Image("images/wood.jpg", columnWidth, resourceRowHeight, false, false);
         brick = new ImageView(b);
         ore = new ImageView(o);
         wood = new ImageView(wo);
@@ -134,11 +134,11 @@ public class ResourcePane extends GridPane {
 
         this.add(v2,1,1);
 
-        Image vp = new Image("BlueIvyCatan/images/victorypointcard.jpg",columnWidth,resourceRowHeight,false,true);
-        Image kn = new Image("BlueIvyCatan/images/knight.jpg",columnWidth,resourceRowHeight,false,true);
-        Image rb = new Image("BlueIvyCatan/images/roadbuilding.jpg", columnWidth,resourceRowHeight,false,true);
-        Image mo = new Image("BlueIvyCatan/images/monopoly.jpg",columnWidth,resourceRowHeight,false,true);
-        Image yop = new Image("BlueIvyCatan/images/yearofplenty.jpg",columnWidth,resourceRowHeight,false,true);
+        Image vp = new Image("images/victorypointcard.jpg",columnWidth,resourceRowHeight,false,true);
+        Image kn = new Image("images/knight.jpg",columnWidth,resourceRowHeight,false,true);
+        Image rb = new Image("images/roadbuilding.jpg", columnWidth,resourceRowHeight,false,true);
+        Image mo = new Image("images/monopoly.jpg",columnWidth,resourceRowHeight,false,true);
+        Image yop = new Image("images/yearofplenty.jpg",columnWidth,resourceRowHeight,false,true);
         knights = new ImageView(kn);
         victoryPointCards = new ImageView(vp);
         roadBuilding = new ImageView(rb);

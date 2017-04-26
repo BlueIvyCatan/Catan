@@ -1,4 +1,4 @@
-package BlueIvyCatan.gameObjects;
+package gameObjects;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

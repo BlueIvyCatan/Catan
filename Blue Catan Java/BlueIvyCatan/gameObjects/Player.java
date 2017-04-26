@@ -1,4 +1,4 @@
-package BlueIvyCatan.gameObjects;
+package gameObjects;
 
 import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
